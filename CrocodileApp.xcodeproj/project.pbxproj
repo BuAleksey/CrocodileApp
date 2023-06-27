@@ -8,17 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		874327D12A498F1E00999F6C /* CrocodileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327D02A498F1E00999F6C /* CrocodileAppApp.swift */; };
-		874327D32A498F1E00999F6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327D22A498F1E00999F6C /* ContentView.swift */; };
+		874327D32A498F1E00999F6C /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327D22A498F1E00999F6C /* StartView.swift */; };
 		874327D52A498F1F00999F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 874327D42A498F1F00999F6C /* Assets.xcassets */; };
 		874327D82A498F1F00999F6C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 874327D72A498F1F00999F6C /* Preview Assets.xcassets */; };
+		874327E02A498FB500999F6C /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327DF2A498FB500999F6C /* WordView.swift */; };
+		874327E32A49901B00999F6C /* Extension + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327E22A49901B00999F6C /* Extension + Color.swift */; };
+		874327E52A49909400999F6C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327E42A49909400999F6C /* DataStore.swift */; };
+		874327E72A49913800999F6C /* ProgressTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327E62A49913800999F6C /* ProgressTrackView.swift */; };
+		874327E92A4991B400999F6C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327E82A4991B400999F6C /* MainView.swift */; };
+		874327EB2A49954500999F6C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327EA2A49954500999F6C /* ButtonView.swift */; };
+		874327ED2A4998C300999F6C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327EC2A4998C300999F6C /* TimerView.swift */; };
+		874327EF2A49998300999F6C /* TimerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327EE2A49998300999F6C /* TimerCounter.swift */; };
+		874327F12A49A4EB00999F6C /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327F02A49A4EB00999F6C /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		874327CD2A498F1E00999F6C /* CrocodileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrocodileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		874327D02A498F1E00999F6C /* CrocodileAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrocodileAppApp.swift; sourceTree = "<group>"; };
-		874327D22A498F1E00999F6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		874327D22A498F1E00999F6C /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		874327D42A498F1F00999F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		874327D72A498F1F00999F6C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		874327DF2A498FB500999F6C /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		874327E22A49901B00999F6C /* Extension + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Color.swift"; sourceTree = "<group>"; };
+		874327E42A49909400999F6C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		874327E62A49913800999F6C /* ProgressTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackView.swift; sourceTree = "<group>"; };
+		874327E82A4991B400999F6C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		874327EA2A49954500999F6C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		874327EC2A4998C300999F6C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		874327EE2A49998300999F6C /* TimerCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCounter.swift; sourceTree = "<group>"; };
+		874327F02A49A4EB00999F6C /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				874327D02A498F1E00999F6C /* CrocodileAppApp.swift */,
-				874327D22A498F1E00999F6C /* ContentView.swift */,
+				874327D22A498F1E00999F6C /* StartView.swift */,
+				874327E82A4991B400999F6C /* MainView.swift */,
+				874327DE2A498F9F00999F6C /* Components */,
+				874327E12A498FEA00999F6C /* Extensions */,
+				874327EE2A49998300999F6C /* TimerCounter.swift */,
+				874327E42A49909400999F6C /* DataStore.swift */,
 				874327D42A498F1F00999F6C /* Assets.xcassets */,
 				874327D62A498F1F00999F6C /* Preview Content */,
 			);
@@ -65,6 +88,26 @@
 				874327D72A498F1F00999F6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		874327DE2A498F9F00999F6C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				874327DF2A498FB500999F6C /* WordView.swift */,
+				874327E62A49913800999F6C /* ProgressTrackView.swift */,
+				874327F02A49A4EB00999F6C /* ProgressView.swift */,
+				874327EC2A4998C300999F6C /* TimerView.swift */,
+				874327EA2A49954500999F6C /* ButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		874327E12A498FEA00999F6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				874327E22A49901B00999F6C /* Extension + Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +180,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				874327D32A498F1E00999F6C /* ContentView.swift in Sources */,
+				874327EF2A49998300999F6C /* TimerCounter.swift in Sources */,
+				874327ED2A4998C300999F6C /* TimerView.swift in Sources */,
+				874327D32A498F1E00999F6C /* StartView.swift in Sources */,
+				874327E92A4991B400999F6C /* MainView.swift in Sources */,
+				874327EB2A49954500999F6C /* ButtonView.swift in Sources */,
+				874327E32A49901B00999F6C /* Extension + Color.swift in Sources */,
 				874327D12A498F1E00999F6C /* CrocodileAppApp.swift in Sources */,
+				874327E52A49909400999F6C /* DataStore.swift in Sources */,
+				874327E02A498FB500999F6C /* WordView.swift in Sources */,
+				874327E72A49913800999F6C /* ProgressTrackView.swift in Sources */,
+				874327F12A49A4EB00999F6C /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
