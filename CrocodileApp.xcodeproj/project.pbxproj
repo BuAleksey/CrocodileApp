@@ -20,6 +20,8 @@
 		874327ED2A4998C300999F6C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327EC2A4998C300999F6C /* TimerView.swift */; };
 		874327EF2A49998300999F6C /* TimerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327EE2A49998300999F6C /* TimerCounter.swift */; };
 		874327F12A49A4EB00999F6C /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874327F02A49A4EB00999F6C /* ProgressView.swift */; };
+		87D7D1612A581F0C00FF1F5A /* DifficultyLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7D1602A581F0C00FF1F5A /* DifficultyLevels.swift */; };
+		87F10B572A54B372007561C8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F10B562A54B372007561C8 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		874327EC2A4998C300999F6C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		874327EE2A49998300999F6C /* TimerCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCounter.swift; sourceTree = "<group>"; };
 		874327F02A49A4EB00999F6C /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		87D7D1602A581F0C00FF1F5A /* DifficultyLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevels.swift; sourceTree = "<group>"; };
+		87F10B562A54B372007561C8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +76,11 @@
 				874327D02A498F1E00999F6C /* CrocodileAppApp.swift */,
 				874327D22A498F1E00999F6C /* StartView.swift */,
 				874327E82A4991B400999F6C /* MainView.swift */,
+				87F10B562A54B372007561C8 /* SettingsView.swift */,
 				874327DE2A498F9F00999F6C /* Components */,
 				874327E12A498FEA00999F6C /* Extensions */,
 				874327EE2A49998300999F6C /* TimerCounter.swift */,
+				87D7D1602A581F0C00FF1F5A /* DifficultyLevels.swift */,
 				874327E42A49909400999F6C /* DataStore.swift */,
 				874327D42A498F1F00999F6C /* Assets.xcassets */,
 				874327D62A498F1F00999F6C /* Preview Content */,
@@ -181,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				874327EF2A49998300999F6C /* TimerCounter.swift in Sources */,
+				87D7D1612A581F0C00FF1F5A /* DifficultyLevels.swift in Sources */,
 				874327ED2A4998C300999F6C /* TimerView.swift in Sources */,
 				874327D32A498F1E00999F6C /* StartView.swift in Sources */,
 				874327E92A4991B400999F6C /* MainView.swift in Sources */,
@@ -189,6 +196,7 @@
 				874327D12A498F1E00999F6C /* CrocodileAppApp.swift in Sources */,
 				874327E52A49909400999F6C /* DataStore.swift in Sources */,
 				874327E02A498FB500999F6C /* WordView.swift in Sources */,
+				87F10B572A54B372007561C8 /* SettingsView.swift in Sources */,
 				874327E72A49913800999F6C /* ProgressTrackView.swift in Sources */,
 				874327F12A49A4EB00999F6C /* ProgressView.swift in Sources */,
 			);

@@ -8,29 +8,55 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var timer = TimerCounter()
-    
+    @State private var settingsViewIsShow = false
+    @StateObject private var timer = TimerCounter.shared
+    @StateObject private var store = DataStore.shared
     
     var body: some View {
-        ZStack {
-            Color(Color.backgroundColor.cgColor!)
-                .ignoresSafeArea(.all)
-            VStack {
-                Spacer()
-                WordView(isShowWord: timer.finish)
-                    .padding(.bottom)
-                Spacer()
-                ZStack {
-                    ProgressTrackView()
-                    ProgressView(progress: timer.progress)
-                    TimerView(timer: timer.counter.formatted())
+        NavigationStack {
+            ZStack {
+                Color(Color.background.cgColor!)
+                    .ignoresSafeArea(.all)
+                
+                VStack {
+                    WordView(wordIsShow: timer.finish, words: store.words)
+                        .padding([.top, .bottom], 60)
+                    
+                    ZStack {
+                        ProgressTrackView()
+                        ProgressView(progress: timer.progress)
+                        TimerView(seconds: timer.counter.formatted())
+                    }
+                    .padding(.bottom, 40)
+                    
+                    Spacer()
+                    
+                    ButtonView(
+                        action: timer.startTimer,
+                        title: timer.titleButton,
+                        width: 300
+                    )
+                    .disabled(timer.titleButton == .Wait)
+                    
+                    Spacer()
                 }
-                Spacer()
-                ButtonView(action: timer.startTimer, title: timer.titleButton)
-                Spacer()
+                .padding()
+                .toolbar {
+                    Button(action: { gearButtonTapped() }) {
+                        Image(systemName: "gear")
+                            .foregroundColor(.text)
+                    }
+                    .navigationDestination(isPresented: $settingsViewIsShow, destination: {
+                        SettingsView(settingsViewIsShow: $settingsViewIsShow)
+                    })
+                }
             }
-            .padding()
         }
+    }
+    
+    private func gearButtonTapped() {
+        timer.killTimer()
+        settingsViewIsShow.toggle()
     }
 }
 

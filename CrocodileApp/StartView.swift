@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct StartView: View {
-    @State private var isShowMainView = false
+    @State private var mainVewIsShow = false
     
     var body: some View {
         ZStack {
-            Color(Color.backgroundColor.cgColor!)
+            Color(Color.background.cgColor!)
                 .ignoresSafeArea(.all)
-            Button("Start", action: {isShowMainView = true})
-                .fullScreenCover(
-                    isPresented: $isShowMainView,
-                    content: { MainView() }
+            
+            VStack {
+                Image("crocodile")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                
+                ButtonView(
+                    action: { mainVewIsShow.toggle() },
+                    title: .Go, width: 200
                 )
+                    .fullScreenCover(
+                        isPresented: $mainVewIsShow,
+                        content: { MainView() }
+                    )
+            }
         }
     }
 }

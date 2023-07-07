@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct TimerView: View {
-    var timer: String
+    var seconds: String
     
     var body: some View {
-        Text(timer)
+        Text(seconds)
             .font(.system(.largeTitle, design: .rounded, weight: .bold))
-            .foregroundColor(.textColor)
+            .foregroundColor(.text)
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timer: "3")
+        TimerView(seconds: "3")
     }
 }

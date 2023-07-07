@@ -10,14 +10,20 @@ import Combine
 import SwiftUI
 
 class TimerCounter: ObservableObject {
+    static let shared = TimerCounter()
+    
     let objectWillChange = PassthroughSubject<TimerCounter, Never>()
     
-    var counter = 3
-    var progress: CGFloat { CGFloat(counter) / 3 }
-    var titleButton = "Start"
+    var counter = 60
+    var fullCounter = 60
+    var progress: CGFloat { CGFloat(counter) / CGFloat(fullCounter) }
+    
+    var titleButton = DifficultyLevel.Start
     var timer: Timer?
     
     var finish = false
+    
+    private init() {}
     
     func startTimer() {
         if counter > 0 {
@@ -39,28 +45,34 @@ class TimerCounter: ObservableObject {
             }
         } else {
             killTimer()
-            titleButton = "Reset"
+            titleButton = .Restart
         }
         
         objectWillChange.send(self)
     }
     
     private func buttonDidTapped() {
-        if titleButton == "Reset" {
+        if titleButton == .Restart {
             finish = false
-            counter = 3
-            titleButton = "Start"
+            counter = fullCounter
+            titleButton = .Start
         } else {
             finish = true
-            titleButton = "Wait"
+            titleButton = .Wait
         }
         
         objectWillChange.send(self)
     }
     
-    private func killTimer() {
+    func killTimer() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    func acceptNewSettings() {
+        finish = false
+        titleButton = .Start
+        objectWillChange.send(self)
     }
 }
 

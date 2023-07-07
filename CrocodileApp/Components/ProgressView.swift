@@ -25,7 +25,9 @@ struct ProgressView: View {
                                 lineJoin:.round
                             )
                         )
-                        .foregroundColor(.fillingLineColor)
+                        .foregroundColor(
+                            progress > 0.2 ? .progress : .attantion
+                        )
                         .animation(.easeInOut(duration: 0.3))
                 )
         }
