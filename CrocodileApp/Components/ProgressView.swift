@@ -28,7 +28,7 @@ struct ProgressView: View {
                         .foregroundColor(
                             progress > 0.2 ? .progress : .attantion
                         )
-                        .animation(.easeInOut(duration: 0.3))
+                        .animation(.easeInOut(duration: 0.3), value: progress)
                 )
         }
     }

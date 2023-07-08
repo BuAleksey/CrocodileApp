@@ -19,8 +19,7 @@ struct SettingsView: View {
     
     @Binding var settingsViewIsShow: Bool
     
-    @State var count = 0
-    @State var alertIsShow = false
+    @State var count = 60
     
     var body: some View {
         ZStack {
@@ -58,11 +57,6 @@ struct SettingsView: View {
                     }
                     .frame(width: 200)
                 }
-                .alert(
-                    "Please set the number of seconds",
-                    isPresented: $alertIsShow,
-                    actions: {}
-                )
                 .padding()
                 
                 Spacer()
@@ -80,22 +74,17 @@ struct SettingsView: View {
     private func apply() {
         timer.counter = count
         timer.fullCounter = count
+        timer.acceptNewSettings()
         
-        if count != 0 {
-            timer.acceptNewSettings()
-            
-            if count == 30 {
-                store.words = Words.shared.easyWords
-            } else if count == 60 {
-                store.words = Words.shared.mediumWords
-            } else if count == 100 {
-                store.words = Words.shared.hardWords
-            }
-            store.objectWillChange.send(store)
-            settingsViewIsShow.toggle()
-        } else {
-            alertIsShow.toggle()
+        if count == 30 {
+            store.words = Words.shared.easyWords
+        } else if count == 60 {
+            store.words = Words.shared.mediumWords
+        } else if count == 100 {
+            store.words = Words.shared.hardWords
         }
+        store.objectWillChange.send(store)
+        settingsViewIsShow.toggle()
     }
 }
 
